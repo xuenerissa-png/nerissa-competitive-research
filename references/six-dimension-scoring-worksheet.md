@@ -10,7 +10,7 @@
 
 ### 1 · Customer Overlap
 
-- [ ] 0 — Completely mismatched (e.g. their customers are F50, yours are SMB indie hackers)
+- [ ] 0 — Completely mismatched (e.g. their customers are Fortune 50, yours are SMB indie hackers)
 - [ ] 1 — Partial overlap (some customer types match but most don't)
 - [ ] 2 — Highly overlapping (their customer profile = your customer profile)
 

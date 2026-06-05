@@ -29,7 +29,7 @@
 - [ ] Customer overlap was VERIFIED — not estimated by gut
 - [ ] Sources checked: official customer wall, ≥ 1 case study, Twitter / G2 / ProductHunt reviews
 - [ ] If competitor's main customer profile doesn't match yours, this is the FIRST line of the recommendation (not buried)
-- [ ] If they have giant logos that don't reflect your reality, that's noted (e.g. "they show F500 but their actual ICP is mid-market")
+- [ ] If they have giant logos that don't reflect your reality, that's noted (e.g. "they show Fortune 500 but their actual ICP is mid-market")
 
 ## Inheritance Discipline
 
@@ -54,7 +54,7 @@
 
 - [ ] No "anti-[competitor name]" framing (free advertising for them)
 - [ ] No reverence-tone reproducing competitor marketing copy without critique
-- [ ] If a giant (Alibaba / ByteDance / Meta / Google) is mentioned, threat is framed neutrally (not "they're amazing", not "they're stupid")
+- [ ] If a giant (any major platform · domestic or global) is mentioned, threat is framed neutrally (not "they're amazing", not "they're stupid")
 
 ## Output Discipline
 

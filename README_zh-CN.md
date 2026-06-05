@@ -89,15 +89,15 @@ git clone https://github.com/xuenerissa-png/nerissa-competitive-research.git
 
 5 个真实案例(脱敏)在 `examples/`:
 
-- **01 · LATKA 找到的 bootstrapped SaaS** — Cometly 案例。原 DD 写 "$500k 种子"。LATKA + Rewardful + 官方 About 三方交叉验证:**$0 融资 · 7 人 · 4 年 $770k ARR**。错的数字在内部传播了几周才被纠正。
+- **01 · 用 LATKA 找到的 bootstrapped SaaS** — 一家 B2B 归因 SaaS · 老 DD 写 "$500k 种子"。LATKA + 联盟平台案例 + 官方 About 三方交叉验证:**$0 融资 · 7 人 · 4 年 $770k ARR**。错的数字在内部传播了几周才被纠正。
 
-- **02 · 融资浪潮里的封装层** — Lovable 案例。$400M ARR · $6.6B 估值。原判断:"AI 全栈生成器 · 必须学"。本质拆解后发现:**它本质 = v0(UI 生成)+ Supabase(后端)+ Cloudflare(部署)封装** · 没造任何新技术。这把结论从"必须学"改成了"它的护城河是规模/资本/品牌 · 我们学不来"。
+- **02 · 融资浪潮里的封装层** — 一家热门 AI app builder($400M ARR · $6.6B 估值)。原判断:"必须学"。本质拆解后发现:**它本质是把 UI-gen 工具 + BaaS + edge 云三件套封装成对话式界面** · 没造任何新技术。结论从"必须学"改成了"它的护城河是规模/资本/品牌 · 我们学不来"。
 
-- **03 · 中国直接对标** — 百型智能案例。36 氪报道 "哈啰前 COO 创业外贸 AI agent · 拿金沙江 Pre-A 数千万" — 立刻调研。多源 verify:创始人韩美的阿里 + 哈啰背景 / 拟人化 AI 员工 Zoe/David/Lisa / 真实客户案例数字。**比之前对标的 Sierra(F50 客户)更贴近我们的实际客户画像**。
+- **03 · 本地市场直接对标** — 在一篇技术媒体报道里看到 "独角兽前 COO 创业 vertical AI agent · 拿一线 VC Pre-A 数千万" — 立刻调研。多源 verify:创始人国际支付 + 独角兽分发背景 / 拟人化命名的 AI 员工 / 真实客户案例数字。**比之前对标的美国企业级巨头更贴近原团队的实际客户画像**。
 
-- **04 · 巨头入局警示** — 阿里 Accio Work 案例。**不是直接竞品** · 但巨头免费 + 生态变现的入局 = 对付费 Concierge 模型是结构性威胁。标记为月度监控 · 不做深度调研。
+- **04 · 巨头入局警示** — 一家主流电商平台给生态商家上线了免费跨境 AI agent。**不是直接竞品** · 但巨头免费 + 生态变现的入局 = 对付费 Concierge 模型是结构性威胁。标记为月度监控 · 不做深度调研。
 
-- **05 · 双轨示例** — Sierra($1.5B 融资 · $15B 估值 · F50 客户)vs Cometly($0 融资 · 7 人 · $770k ARR)。两家都相关 · 但用途不同。Sierra 是轨道 A(融资参照系 · "我们是 Sierra outcome 模型的 vertical 版本")· Cometly 是轨道 B(业务学习 · "他们的 bootstrap 路径才是我们真能复制的")。**最初混了两者 · 误把 Cometly 从推荐清单里删了 — 直到双轨澄清才救回来**。
+- **05 · 双轨示例** — 一家企业级 AI agent 巨头($1.5B 融资 · $15B 估值 · Fortune 50 客户)vs 一家 bootstrapped 同行($0 融资 · 7 人 · $770k ARR)。两家都相关 · 但用途不同。巨头是轨道 A(融资参照系 · "我们是 outcome 模型的 vertical 版本")· bootstrapped 同行是轨道 B(业务学习 · "他们的路径才是我们真能复制的")。**最初混了两者 · 误把 bootstrapped 同行从推荐清单里删了 — 直到双轨澄清才救回来**。
 
 ## 为什么会有这份 Skill
 
@@ -105,9 +105,9 @@ git clone https://github.com/xuenerissa-png/nerissa-competitive-research.git
 
 - 沿用老 DD 的融资数字 · 不重核
 - 把公司称为"竞品" · 但没打开过它的官网
-- 推荐 Lovable 当学习目标 · 没意识到它本质是个封装层 · 我们学不来
-- 在 5 份报告里说"我们签了 3 家 design partner" · 而 source-of-truth 数据库显示 0 已签
-- 凭 1 个样本就锁定"制造业出海"作为 vertical · 实际上整个 pipeline 只有 40% 是制造业
+- 把一家热门 AI app builder 推荐为学习目标 · 没意识到它本质是个封装层 · 我们学不来
+- 在 5 份报告里说"我们签了 3 家客户" · 而 source-of-truth 数据库显示 0 已签 · 2 报价中 · 9 沟通中
+- 凭 1 个样本就锁定某个行业作为 vertical · 实际整个 pipeline 只有 40% 匹配该行业
 
 每一次纠正都指向一条规则。这份 skill 把它们全部捕获。
 

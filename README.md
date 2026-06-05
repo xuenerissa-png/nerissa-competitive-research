@@ -89,15 +89,15 @@ Total: 30-60 minutes per company
 
 5 worked examples in `examples/` (sanitized from real research):
 
-- **01 · Bootstrapped SaaS via LATKA** — Cometly case. Original DD said "$500k seed." LATKA + Rewardful + official About cross-verified: $0 funding, fully bootstrapped, $770k ARR with 7 people. The wrong number propagated for weeks before correction.
+- **01 · Bootstrapped SaaS via LATKA** — A B2B attribution SaaS was listed in an old DD as "$500k seed." LATKA + an affiliate platform case + official "About" page cross-verified: $0 funding, fully bootstrapped, $770k ARR with 7 people. The wrong number propagated for weeks before correction.
 
-- **02 · Funding wave packaging layer** — Lovable case. $400M ARR, $6.6B valuation. Original take: "AI full-stack builder." Essence decomposition revealed: it's v0 (UI gen) + Supabase (backend) + Cloudflare (deploy) packaged with a conversational interface. No new technology. This changed the conclusion from "must learn from" to "they have wide moat (scale/capital/brand) but technically anyone can copy."
+- **02 · Funding wave packaging layer** — A hot AI app-builder ($400M ARR, $6.6B valuation). Original take: "AI full-stack builder, must learn from." Essence decomposition revealed: it's a packaging layer over commodity infrastructure (UI-gen tool + BaaS + edge cloud) with a conversational interface. No new technology. Conclusion changed from "must learn" to "wide moat (scale/capital/brand) — technically anyone can copy, but they out-spent everyone on onboarding UX."
 
-- **03 · China direct competitor** — Baixing Intelligence case. Found via 36Kr report mentioning ex-Hello COO founding an overseas trade AI agent startup. Multi-source verified: founder background, Jinsha Jiang Pre-A funding, named AI employees (Zoe / David / Lisa). Closer mirror to our customer profile than the Sierra-class US giants we had been benchmarking against.
+- **03 · Direct local-market competitor** — Found via a tech-media report mentioning an ex-unicorn COO founding a vertical AI agent for outbound sales. Multi-source verified: founder background (international payments → unicorn distribution), tier-1 VC Pre-A funding, humanized "named AI employees" product framing. A much closer mirror to the original team's customer profile than the US enterprise giants they had been benchmarking against.
 
-- **04 · Incumbent warning** — Alibaba Accio Work case. Not a direct competitor. But entry of a giant with free + ecosystem monetization is a structural threat to a paid Concierge model. Flagged for monthly monitoring, not deep research.
+- **04 · Incumbent warning** — A major platform launches a free AI agent for its ecosystem users. Not a direct competitor. But entry of a giant with free + ecosystem monetization is a structural threat to paid service models in adjacent space. Flagged for monthly monitoring, not deep research.
 
-- **05 · Dual-track example** — Sierra ($1.5B funding, $15B valuation, F50 customers) vs Cometly ($0 funding, 7 people, $770k ARR). Both relevant — but for different uses. Sierra is Track A (fundraising-reference, "we're a vertical version of Sierra's outcome model"). Cometly is Track B (business-learning, "their bootstrap path is what we can actually replicate"). Confusing the two killed Cometly from the recommendation list initially.
+- **05 · Dual-track example** — An enterprise AI agent giant ($1.5B funding, $15B valuation, Fortune 50 customers) vs a bootstrapped peer ($0 funding, 7 people, $770k ARR). Both relevant — but for different uses. The giant is Track A (fundraising-reference: "we're a vertical version of their outcome model"). The bootstrapped peer is Track B (business-learning: "their path is what we can actually replicate"). Confusing the two initially killed the bootstrapped peer from the recommendation list.
 
 ## Why This Exists
 
@@ -105,9 +105,9 @@ I built this skill while doing real competitive research for an early-stage grow
 
 - Re-quoting funding numbers from old DD reports without re-checking
 - Calling companies "competitors" without opening their website
-- Recommending Lovable as a learning target without realizing it's a packaging-layer with a moat we can't access
-- Saying "we signed 3 design partners" in 5 reports when the source-of-truth database showed 0 signed
-- Defaulting to "manufacturing exports" as our vertical based on 1 sample company, when actually only 40% of our pipeline was manufacturing
+- Recommending a hot AI app-builder as a learning target without realizing it's a packaging-layer with a moat we can't access
+- Saying "we signed 3 customers" in 5 reports when source-of-truth actually showed 0 signed, 2 in quote stage, 9 in conversation
+- Defaulting to a specific industry vertical based on 1 sample company, when actually only 40% of the pipeline matched that industry
 
 Each correction pointed to a rule. This skill captures all of them.
 

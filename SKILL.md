@@ -24,14 +24,14 @@ A field-tested SOP for competitive research that refuses lazy AI shortcuts. Buil
 
 | # | Principle | What It Prevents |
 |---|---|---|
-| 1 | **Every "signed / acquired / valuation / customer count" claim needs verifiable source** | Repeating "Cometly $500k seed" from a DD report when actual is $0 bootstrapped |
-| 2 | **Open the official website. Don't rely on aggregator blogs** | Missing that Gojiberry's site exists (anti-scraping returned 403, not "no website") |
-| 3 | **Inheriting historical judgment requires explicit tagging** | Recommending Lovable as competitor without re-evaluating that it's a v0+Supabase+Cloudflare packaging layer |
-| 4 | **Decompose the essence. Don't just describe what it does** | Saying "AI full-stack builder" without saying "essentially a packaging layer over v0+Supabase+Cloudflare" |
-| 5 | **Funding size ≠ relevance** | Treating $400M ARR Lovable as a learning target when its customer layer doesn't match yours at all |
-| 6 | **Customer overlap requires verification, not intuition** | Claiming "Lovable customers don't overlap with ours" when actual overlap is 30-50% |
-| 7 | **Separate dual tracks: fundraising-reference vs business-learning** | Killing Cometly ($0 funding) because "our funding goal is $10M+" — confusing two different uses |
-| 8 | **Don't say "X has signed Y customers" without checking the source-of-truth database** | Reporting "we signed 3 DPAs" 5 times when source-of-truth showed 0 signed, 2 in quote, 9 in conversation |
+| 1 | **Every "signed / acquired / valuation / customer count" claim needs verifiable source** | Repeating "$500k seed" from a DD report when reality is "$0 bootstrapped" (one secondhand blog was wrong) |
+| 2 | **Open the official website. Don't rely on aggregator blogs** | Treating an anti-scraping 403 as "no website exists" and skipping the company entirely |
+| 3 | **Inheriting historical judgment requires explicit tagging** | Recommending a competitor on old DD without re-evaluating that it's actually a packaging layer over commodity tools |
+| 4 | **Decompose the essence. Don't just describe what it does** | Saying "AI full-stack builder" without saying "essentially a packaging layer over UI-gen + BaaS + edge cloud" |
+| 5 | **Funding size ≠ relevance** | Treating $400M-ARR companies as learning targets when their customer layer doesn't match yours at all |
+| 6 | **Customer overlap requires verification, not intuition** | Claiming "their customers don't overlap with ours" when actual overlap is 30-50% |
+| 7 | **Separate dual tracks: fundraising-reference vs business-learning** | Killing a $0-funded peer because "our fundraising goal is $10M+" — confusing two different uses |
+| 8 | **Don't say "X has signed Y customers" without checking the source-of-truth database** | Reporting "we signed 3 customers" in 5 reports when source-of-truth showed 0 signed, 2 in quote, 9 in conversation |
 
 ## The 7-Step SOP (30-60 minutes per company)
 
@@ -141,7 +141,7 @@ Every researched company must populate these in your tracking database:
 | Investor / customer / peer mentions a company | ✅ Immediately |
 | TechCrunch / 36Kr reports new funding in your space | ✅ Immediately |
 | Conference brings in a new potential customer | ✅ Research the customer (not as competitor) |
-| Giant (Alibaba / ByteDance / Meta) enters similar space | ✅ Immediately + high priority |
+| A giant (major e-commerce / social / cloud platform) enters similar space | ✅ Immediately + high priority |
 | Existing competitor gets new funding / launches / collapses | ✅ Upgrade the existing card |
 | Team member says "I think X company is impressive" | ⚠️ First ask 6-dimension preview · only 8+ goes to formal research |
 
@@ -165,11 +165,11 @@ When invoked, Claude will:
 ## Examples Inside This Skill
 
 See `examples/` for 5 worked examples (sanitized) from real research sessions:
-- `01-bootstrapped-saas-found-via-LATKA.md` — Cometly case (corrected the $500k seed myth)
-- `02-funding-wave-packaging-layer.md` — Lovable case (decomposed essence to v0+Supabase+Cloudflare)
-- `03-china-direct-competitor.md` — Baixing Intelligence case (found via 36Kr, multi-source verified)
-- `04-incumbent-warning.md` — Alibaba Accio Work case (giant entry signal)
-- `05-fundraising-reference-vs-learning-target.md` — Sierra vs Cometly (dual-track example)
+- `01-bootstrapped-saas-found-via-LATKA.md` — Bootstrapped SaaS case (corrected a $500k-seed myth via LATKA cross-check)
+- `02-funding-wave-packaging-layer.md` — Funding-wave AI builder case (decomposed essence to UI-gen + BaaS + edge cloud packaging)
+- `03-china-direct-competitor.md` — Direct local-market competitor found via tech-media news, multi-source verified
+- `04-incumbent-warning.md` — Incumbent giant entry case (treated as warning, not deep research target)
+- `05-fundraising-reference-vs-learning-target.md` — Enterprise giant vs bootstrapped peer (dual-track example)
 
 ## Linked Resources
 
