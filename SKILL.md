@@ -32,8 +32,9 @@ A field-tested SOP for competitive research that refuses lazy AI shortcuts. Buil
 | 6 | **Customer overlap requires verification, not intuition** | Claiming "their customers don't overlap with ours" when actual overlap is 30-50% |
 | 7 | **Separate dual tracks: fundraising-reference vs business-learning** | Killing a $0-funded peer because "our fundraising goal is $10M+" — confusing two different uses |
 | 8 | **Don't say "X has signed Y customers" without checking the source-of-truth database** | Reporting "we signed 3 customers" in 5 reports when source-of-truth showed 0 signed, 2 in quote, 9 in conversation |
+| 9 | **Tag every claim with Evidence Level (L1A-L5). Don't mix L5 self-reports with L1B verified data** | Treating "iSales 月入百万 (founder self-report)" as same credibility as "Nectar $40.6M (3-source verified)" — leads to fragile strategy built on un-verified claims |
 
-## The 7-Step SOP (30-60 minutes per company)
+## The 8-Step SOP (40-75 minutes per company)
 
 ### Step 1 · Open the official website (30 seconds)
 - Open the main domain
@@ -64,17 +65,45 @@ Ask 5 questions:
 - Search Twitter / Reddit / G2 / ProductHunt for real user feedback
 - Cross-reference against your own current customers to assess overlap
 
+### Step 4.5 ⭐ NEW · Tag every claim with Evidence Level (5 minutes)
+
+Before scoring, classify every piece of evidence you collected into one of 5 levels:
+
+| Level | Source Type | Example |
+|---|---|---|
+| **L1A** | Audited financials / SEC / IPO prospectus + ≥ 2 sources | "Snowflake ARR $2.8B per 10-K filing" |
+| **L1B** | Tier-1 financial press cross-verified ≥ 3 sources | "Nectar $40.6M cumulative per TechCrunch + Menlo + Yahoo" |
+| **L2** | Official site + company PR + LinkedIn page ≥ 2 sources | "Nectar serves DTC brands per nectarsocial.com logo wall + PR" |
+| **L3** | Single trusted vertical media / G2 reviews | "百型智能国家备案 per 新浪财经 single-source — pending cross-check" |
+| **L4** | Secondary aggregators / VC blog / founder interviews | "iSales founder background per Tencent News interview" |
+| **L5** ⚠️ | Self-report / Claude inference / prediction | "iSales 月入百万 (founder self-report ⚠️)" / "I estimate ARR $5-20M" |
+
+**Mandatory output**: Every assertion in steps 1-4 must carry a `[L1A/L1B/L2/L3/L4/L5]` tag.
+
+See `references/evidence-level-pyramid.md` for full rules and examples.
+
 ### Step 5 · Score on 6 dimensions (5 minutes)
 Score 0-2 on each, sum to 12. Only 8+ qualifies for Top.
+
+**⚠️ NEW**: Each dimension's score must also include its supporting **evidence level**. Final score reported as both **nominal** and **discounted** (L5-backed dimensions = 0 in discounted).
 
 | Dimension | 0 points | 1 point | 2 points |
 |---|---|---|---|
 | Customer overlap | Completely mismatched | Partial overlap | Highly overlapping |
 | Business model borrowability | Path entirely different | Some shared mechanics | Directly copyable |
-| Capital/team scale proximity | $100M+ / 100+ people | $10-50M / 30-80 people | <$10M / 2-20 people or bootstrapped |
+| Capital/team scale proximity | $100M+ / 100+ people | AI-50M / 30-80 people | <$10M / 2-20 people or bootstrapped |
 | Recent activity | Dead / 18 months silent | 12 months product updates no funding | 6 months funding / ARR disclosed |
 | Real cash flow | All funding-burn | ARR > $1M but funding-supported | Bootstrapped or ARR/funding > 1 |
 | Pipeline relevance | Unrelated | Part of pipeline relevant | Full pipeline (Concierge) directly relevant |
+
+**Score table format** (new mandatory column):
+
+| Dimension | Score | Evidence Level | Rationale |
+|---|:---:|:---:|---|
+| Customer overlap | 2 | L2 | Official site logo wall + case study |
+| Cash flow | 2 | L5 ⚠️ | Founder self-report on Tencent — UN-VERIFIED |
+| **Nominal total** | **11/12** | — | — |
+| **Discounted total** | **9/12** | — | L5 cash flow dimension contributes 0 |
 
 ### Step 6 · Produce 3 sentences (15 minutes)
 - **One-sentence "what it is"**
@@ -83,6 +112,26 @@ Score 0-2 on each, sum to 12. Only 8+ qualifies for Top.
 
 ### Step 7 · Enter into structured database (5 minutes)
 Use the 24-field schema (see `references/feishu-base-schema.md` for Feishu Base template).
+
+**NEW mandatory fields** (added 2026-06-07):
+- `evidence_level_overall` (L1A/L1B/L2/L3/L4/L5)
+- `funding_evidence_level`
+- `customer_evidence_level`
+- `arr_evidence_level`
+- `last_evidence_review` (date)
+- `pending_verification` (multi-line text — list every L5 ⚠️ claim and the action to upgrade it)
+
+### Step 8 ⭐ NEW · Run the Evidence Level Pre-Publish Checklist (5 minutes)
+
+Before any report is shared with the team / investors, run through `references/evidence-level-checklist.md`. The report goes back to revision unless all boxes are ✅.
+
+**Critical floor checks**:
+- No strategic conclusion built solely on L4-L5 evidence
+- All L5 inferences quarantined to "💭 Inference Section"
+- All "X will happen in N months" predictions rewritten as hypothetical scenarios
+- "Pending Verification" section enumerates every L5 ⚠️ and its upgrade path
+
+**Sanity test**: If I removed all L5 ⚠️ content from this report, would my conclusions still hold? If no, the report is **draft-only — do not share**.
 
 ## Dual-Track Structure (Don't Mix)
 
@@ -176,7 +225,15 @@ See `examples/` for 5 worked examples (sanitized) from real research sessions:
 - `references/feishu-base-schema.md` — Feishu Base table-creation script (24 fields, ready to bash)
 - `references/six-dimension-scoring-worksheet.md` — Print-and-fill scoring template
 - `references/anti-lazy-checklist.md` — Pre-publish checklist (don't publish until all green)
+- ⭐ `references/evidence-level-pyramid.md` — 5-level evidence pyramid (L1A → L5) adapted from EBM; mandatory tagging rules for every claim
+- ⭐ `references/evidence-level-checklist.md` — Pre-publish checklist for evidence discipline; all boxes must be ✅ before sharing
 
 ## A Note on Provenance
 
 This skill was extracted from a real growth-stage startup's competitive research practice. Every principle in the "Core Principles" table corresponds to a documented failure that was caught and corrected. The 6-dimension scoring system was empirically derived from comparing 12 sample companies and noting which dimensions actually predicted "useful to learn from" vs "irrelevant to learn from."
+
+### 2026-06-07 Update · Evidence-Based Discipline
+
+The evidence-level pyramid (Principle 9, Step 4.5, Step 8) was added after Claude (the AI agent) was caught mixing L5 founder self-reports (e.g. "iSales monthly revenue ¥1M") with L1B verified funding data in strategy conclusions, then using L5-backed scoring to recommend "Track A fundraising reference" status. nerissa observed that this propagated un-verified assumptions into all downstream decisions (PRD direction, pitch deck, differentiation arguments). The 5-level evidence pyramid was directly transplanted from evidence-based medicine (Oxford CEBM), where the same anti-pattern (treating expert opinion same as RCT) caused decades of clinical errors before EBM systematized it.
+
+The behavioral rule: **never let an L5-backed scoring item win the strategy conversation alone.**
